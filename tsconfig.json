@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "target": "es6",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/test/*": ["src/tests/*"]
+    }
+    // "strict": true,
+    // "strictNullChecks": false,
+    // "strictFunctionTypes": false,
+    // "strictPropertyInitialization": false,
+    // "noImplicitAny": false
+  },
+  "include": ["src", "src/tests"]
+}
