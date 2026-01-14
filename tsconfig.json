@@ -12,8 +12,9 @@
     "esModuleInterop": true,
     "baseUrl": "src",
     "paths": {
+      "@domain/*": ["domain/*"],
       "@/*": ["src/*"],
-      "@/test/*": ["src/tests/*"]
+      "@/test/*": ["tests/*"]
     }
     // "strict": true,
     // "strictNullChecks": false,
@@ -21,5 +22,6 @@
     // "strictPropertyInitialization": false,
     // "noImplicitAny": false
   },
-  "include": ["src", "src/tests"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "coverage"]
 }

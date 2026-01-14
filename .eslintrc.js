@@ -1,6 +1,5 @@
 module.exports = {
   env: {
-    browser: true,
     es2021: true,
     node: true,
   },
@@ -11,21 +10,22 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
+    ecmaVersion: 2022,
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'prettier'],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
+  ignorePatterns: ['dist/**', 'node_modules/**', '*.js', '*.d.ts'],
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'prettier/prettier': 'error',
+    '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
 };
